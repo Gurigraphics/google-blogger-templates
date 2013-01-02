@@ -1,0 +1,53 @@
+<!-- Minimal Google Blogger template -->
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html b:version='2' class='v2 no-js' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <title>Kykyev2</title>
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width"/>
+
+        <b:skin><![CDATA[
+
+            #Navbar1 {
+                display: none;
+            }
+
+            #Header1 {
+                display: none;
+            }
+            
+        ]]></b:skin>
+    </head>
+    <body>
+        <b:section class='main' id='main' showaddelement='no'>
+            <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
+                <b:includable id='main' var='top'>
+                    <div class='b-posts'>
+                        <b:loop values='data:posts' var='post'>
+                            <b:include data='post' name='post'/>
+                        </b:loop>
+                    </div>
+                </b:includable>
+                <b:includable id='post' var='post'>
+                <!-- Includable with name `post` is mandatory -->
+                    <div class="b-post">
+                        <h2 class="b-post__title"><data:post.title/></h2>
+                        <div class="b-post__body"><data:post.body/></div>
+                    </div>
+                </b:includable>
+            </b:widget>
+        </b:section>
+
+        <!-- Without this section nothing is shown -->
+        <!-- This section is responsible for a following mandatory widgets: -->
+        <!-- Navigation Bar, Attribution, Header. -->
+        <b:section class='footer' id='footer' preferred='yes'/>
+        <!-- %%% %%% %%% -->
+    </body>
+</html>
