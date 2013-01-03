@@ -17,3 +17,5 @@ To hide them one should use css.
 Includable `post` is mandatory.
 
 Can we invoke `post-index` and `post-item` includables from within `post` includable? That is differend includables regarding to page type -- `index` or `item`. Yes, [this is possible]().
+
+#A widget can only contain b:includable elements.
