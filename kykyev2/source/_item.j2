@@ -1,0 +1,33 @@
+<div class="grid">
+    <b:section class='col-1 col-centered' id='main-item' showaddelement='no'>
+        <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
+
+            <b:includable id='main' var='top'>
+                <b:loop values='data:posts' var='post'>
+                    <b:include data='post' name='post'/>
+                    <b:include name='disqus-comments'/>
+                </b:loop>
+            </b:includable>
+
+            <b:includable id='post' var='post'>
+                <div class="b-post">
+                    <h1 class="b-post__title"><data:post.title/></h1>
+                    <p class="b-post__date"><data:post.date/></p>
+                    <div class="b-post__body"><data:post.body/></div>
+                    <div class="b-post__labels">
+                    <b:loop values='data:post.labels' var='label'>
+                        <a class="b-post__label" expr:href="data:post.url">
+                            <data:label.name/>
+                        </a>
+                    </b:loop>
+                    </div>
+                    <div class="b-post__social"></div>
+                </div>
+            </b:includable>
+
+            <b:includable id='disqus-comments'>
+                {% include '_disqus-comments.j2' %}
+            </b:includable>
+        </b:widget>
+    </b:section>
+</div>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html b:version='2' class='v2 no-js' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'> <!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Kykyev2</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width"/>
+    <link type="text/css" rel="stylesheet" href="http://localhost:5000/stylesheets/final.css"/>
+    <!-- Get rid of widgets css bindle -->
+    &lt;style type=&quot;text/css&quot;&gt;
+    &lt;!--/*<b:skin><![CDATA[ */ ]]></b:skin>
+    
+&lt;!--</head>--&gt;&lt;/head&gt; 
+<body>
+
+    <div class="b-header">
+        {% include '_header.j2' %}
+    </div>
+
+<b:if cond='data:blog.pageType == &quot;item&quot;'>
+    {% include '_item.j2' %}
+</b:if>
+
+<b:if cond='data:blog.url == data:blog.homepageUrl'>
+    {% include '_home.j2' %}
+</b:if>
+
+    <!-- Without this section nothing is shown -->
+    <!-- This section is responsible for a following mandatory widgets: -->
+    <!-- Navigation Bar, Attribution, Header. -->
+    <b:section class='footer' id='footer' preferred='yes'/>
+    <!-- %%% %%% %%% -->
+<!-- Get rid of annoying default javascript -->
+&lt;!--</body>--&gt;&lt;/body&gt; 
+</html>

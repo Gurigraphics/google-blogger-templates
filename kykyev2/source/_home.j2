@@ -1,0 +1,32 @@
+<div class="grid">
+    <b:section class='col-1' id='main-index' showaddelement='no'>
+        <b:widget id='Blog2' locked='true' title='Blog Posts' type='Blog'>
+            <b:includable id='main' var='top'>
+                <div class='grid i2-grid b-posts-home'>
+                    <b:loop values='data:posts' var='post'>
+                        <b:include data='post' name='post'/>
+                    </b:loop>
+                </div>
+            </b:includable>
+            <b:includable id='post' var='post'>
+                <div class="b-post-home col-1 i2-col-1-2">
+                    <h2 class="b-post-home__title">
+                        <a class="b-post-home__title-link" expr:href="data:post.url">
+                            <data:post.title/>
+                        </a>
+                    </h2>
+                    <div class="b-post-home__body">
+                        <data:post.body/>
+                    <b:if cond='data:post.hasJumpLink'>
+                        <div class="b-post-home__jump">
+                            <a expr:href='data:post.url' expr:title='data:post.title'>
+                                Далее<i>&#187;</i>
+                            </a>
+                        </div>
+                    </b:if>
+                    </div>
+                </div>
+            </b:includable>
+        </b:widget>
+    </b:section>
+</div>

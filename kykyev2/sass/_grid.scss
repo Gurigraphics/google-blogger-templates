@@ -1,0 +1,9 @@
+@import "css-grids/grid-simple/main";
+@import "css-grids/common/respond-to";
+@import "./options";
+
+@include simple_grid("", 5px);
+
+@include respond_to($bp_spec, iphone2) {
+    @include simple_grid("i2-", 5px);
+}
