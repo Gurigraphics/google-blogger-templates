@@ -13,7 +13,7 @@
     <!-- Get rid of widgets css bindle -->
     &lt;style type=&quot;text/css&quot;&gt;
     &lt;!--/*<b:skin><![CDATA[ */ ]]></b:skin>
-    
+
 &lt;!--</head>--&gt;&lt;/head&gt; 
 <body>
 
@@ -27,6 +27,20 @@
 
 <b:if cond='data:blog.url == data:blog.homepageUrl'>
     {% include '_home.j2' %}
+</b:if>
+
+<b:if cond='data:blog.pageType == &quot;index&quot;'>
+    <b:if cond='data:blog.url != data:blog.homepageUrl'>
+        <b:if cond='data:blog.searchLabel'>
+            {% include '_label.j2' %}
+        <b:else/>
+            <b:if cond='data:blog.searchQuery'>
+                {% include '_search.j2' %}
+            <b:else/>
+                {% include '_index.j2' %}
+            </b:if>
+        </b:if>
+    </b:if>
 </b:if>
 
     <!-- Without this section nothing is shown -->

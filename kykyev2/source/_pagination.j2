@@ -1,0 +1,12 @@
+<div class="b-pagination">
+    <div class="b-pagination__wrap">
+        <b:if cond='data:newerPageUrl'>
+            <a expr:href='data:newerPageUrl' expr:title='data:newerPageTitle' 
+               class="b-pagination__newer"><i>&#171;</i>новее</a>
+        </b:if>
+        <b:if cond='data:olderPageUrl'>
+            <a expr:href='data:olderPageUrl' expr:title='data:olderPageTitle'
+               class="b-pagination__older">старее<i>&#187;</i></a>
+        </b:if>
+    </div>
+</div>

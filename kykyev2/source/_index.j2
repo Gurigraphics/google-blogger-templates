@@ -1,9 +1,9 @@
 <div class="grid">
-    <b:section class='col-1' id='home' showaddelement='no'>
-        <b:widget id='Blog2' locked='true' title='Blog Posts' type='Blog'>
+    <b:section class='col-1' id='index' showaddelement='no'>
+        <b:widget id='Blog3' locked='true' title='Blog Posts' type='Blog'>
 
             <b:includable id='main' var='top'>
-                <div class='grid i2-grid b-posts-home'>
+                <div class='grid i2-grid b-posts-index'>
                     <b:loop values='data:posts' var='post'>
                         <b:include data='post' name='post'/>
                     </b:loop>
@@ -12,15 +12,15 @@
             </b:includable>
 
             <b:includable id='post' var='post'>
-                <div class="b-post-home col-1 i2-col-1-2">
-                    <h2 class="b-post-home__title">
-                        <a class="b-post-home__title-link" expr:href="data:post.url">
+                <div class="b-post-index col-1 i2-col-1-2">
+                    <h2 class="b-post-index__title">
+                        <a class="b-post-index__title-link" expr:href="data:post.url">
                             <data:post.title/>
                         </a>
                     </h2>
-                    <div class="b-post-home__body">
+                    <div class="b-post-index__body">
                         <data:post.body/>
-                        <div class="b-post-home__jump">
+                        <div class="b-post-index__jump">
                             <a expr:href='data:post.url' expr:title='data:post.title'>
                                 Далее<i>&#187;</i>
                             </a>

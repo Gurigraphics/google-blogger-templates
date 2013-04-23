@@ -16,7 +16,7 @@
                     <div class="b-post__body"><data:post.body/></div>
                     <div class="b-post__labels">
                     <b:loop values='data:post.labels' var='label'>
-                        <a class="b-post__label" expr:href="data:post.url">
+                        <a class="b-post__label" expr:href="data:label.url">
                             <data:label.name/>
                         </a>
                     </b:loop>
